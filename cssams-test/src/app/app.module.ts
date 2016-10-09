@@ -6,6 +6,11 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+import {
+  CloudSettings,
+  CloudModule
+} from '@ionic/cloud-angular'
+
 @NgModule({
   declarations: [
     MyApp,
