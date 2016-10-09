@@ -11,6 +11,10 @@ import {
   CloudModule
 } from '@ionic/cloud-angular'
 
+const cloudsettings: Cloudsettings = {
+  'app_id': '5bb22bdf'
+}
+
 @NgModule({
   declarations: [
     MyApp,
@@ -20,7 +24,8 @@ import {
     TabsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudsettings)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
