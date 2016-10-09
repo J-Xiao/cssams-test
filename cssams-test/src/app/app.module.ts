@@ -12,7 +12,20 @@ import {
 } from '@ionic/cloud-angular'
 
 const cloudsettings: Cloudsettings = {
-  'app_id': '5bb22bdf'
+  'core': {
+    'app_id': '5bb22bdf'
+  },
+  'push': {
+    'pluginConfig': {
+      'ios': {
+        'badage': true,
+        'sound': true
+      },
+      'android': {
+        'iconColor': '#343434'
+      }
+    }
+  }
 }
 
 @NgModule({
