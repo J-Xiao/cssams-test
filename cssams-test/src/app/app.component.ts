@@ -4,6 +4,10 @@ import { StatusBar } from 'ionic-native';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
+import {
+  Push,
+  PushToken
+} from '@ionic/cloud-angular';
 
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`
