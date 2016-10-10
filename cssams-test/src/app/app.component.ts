@@ -26,8 +26,12 @@ export class MyApp {
   }
 
   register () {
-    this.push.register().then((token: PushToken) => {
-      return this.push.saveToken(token);
-    });
+    this.push.register()
+      .then((token: PushToken) => {
+        return this.push.saveToken(token);
+      },
+      (reason) => {
+        console.log("Error with registration, message is: " + reason);
+      });
   }
 }
