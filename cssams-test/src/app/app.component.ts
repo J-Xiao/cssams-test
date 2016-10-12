@@ -28,10 +28,18 @@ export class MyApp {
   register () {
     this.push.register()
       .then((token: PushToken) => {
+        console.log("Token saved: " + token.token);
         return this.push.saveToken(token);
       },
       (reason) => {
         console.log("Error with registration, message is: " + reason);
+      });
+  }
+
+  subscribe () {
+    this.push.rx.notification()
+      .subscribe((msg) => {
+        alert(msg.title + ': ' + msg.text);
       });
   }
 }
